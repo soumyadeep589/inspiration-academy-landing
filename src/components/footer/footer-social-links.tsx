@@ -5,29 +5,19 @@ import { SocialLink } from '@/interfaces/social-link'
 
 export const socialLinks: SocialLink[] = [
   {
+    name: 'Facebook',
+    link: 'https://www.facebook.com/share/16swor3WnK/',
+    icon: '/images/icons/facebook.svg',
+  },
+  {
     name: 'Instagram',
-    link: '#',
+    link: 'https://www.instagram.com/inspiration102025?igsh=dmFrOG12dGV1a2Fn',
     icon: '/images/icons/instagram.svg',
   },
   {
     name: 'YouTube',
     link: '#',
     icon: '/images/icons/youtube.svg',
-  },
-  {
-    name: 'Twitter',
-    link: '#',
-    icon: '/images/icons/twitter.svg',
-  },
-  {
-    name: 'Dribbble',
-    link: 'https://dribbble.com/shots/18114471-Coursespace-Online-Course-Landing-Page',
-    icon: '/images/icons/dribbble.svg',
-  },
-  {
-    name: 'Github',
-    link: 'https://github.com/hiriski/coursespace-landing-page',
-    icon: '/images/icons/github.svg',
   },
 ]
 
