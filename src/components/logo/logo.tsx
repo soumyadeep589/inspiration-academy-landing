@@ -8,14 +8,20 @@ interface Props {
 
 const Logo: FC<Props> = ({ onClick, variant }) => {
   return (
-    <Box onClick={onClick}>
-      <Typography
-        variant="h4"
-        component="h1"
-        sx={{ fontWeight: 700, '& span': { color: variant === 'primary' ? 'primary.main' : 'unset' } }}
-      >
-        Course<span>space</span>
-      </Typography>
+    <Box
+      onClick={onClick}
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        cursor: onClick ? 'pointer' : 'default',
+        height: '100%', // Ensures vertical centering within parent
+      }}
+    >
+      <img
+        src="/images/inspiration-logo-black.png"
+        alt="Inspiration Logo"
+        style={{ height: 70 }}
+      />
     </Box>
   )
 }
