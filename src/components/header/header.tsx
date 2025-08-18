@@ -4,7 +4,8 @@ import Container from '@mui/material/Container'
 import IconButton from '@mui/material/IconButton'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { Logo } from '@/components/logo'
-import { Navigation, AuthNavigation } from '@/components/navigation'
+import { Navigation } from '@/components/navigation'
+import { StyledButton } from '@/components/styled-button'
 import { useTheme } from '@mui/material/styles'
 import { Menu, Close } from '@mui/icons-material'
 
@@ -45,7 +46,12 @@ const Header: FC = () => {
           >
             <Box /> {/* Magic space */}
             <Navigation />
-            <AuthNavigation />
+            <StyledButton
+              variant="contained"
+              color="primary"
+            >
+              Contact Us
+            </StyledButton>
             {visibleMenu && matchMobileView && (
               <IconButton
                 sx={{
