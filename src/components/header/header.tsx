@@ -46,12 +46,12 @@ const Header: FC = () => {
           >
             <Box /> {/* Magic space */}
             <Navigation />
-            <StyledButton
+            <a href='#mentors'><StyledButton
               variant="contained"
               color="primary"
             >
               Contact Us
-            </StyledButton>
+            </StyledButton></a>
             {visibleMenu && matchMobileView && (
               <IconButton
                 sx={{
