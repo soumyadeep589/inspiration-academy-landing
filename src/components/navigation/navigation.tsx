@@ -3,7 +3,11 @@ import Box from '@mui/material/Box'
 import { Link as ScrollLink } from 'react-scroll'
 import { navigations } from './navigation.data'
 
-const Navigation: FC = () => {
+interface NavigationProps {
+  onLinkClick?: () => void;
+}
+
+const Navigation: FC<NavigationProps> = ({ onLinkClick }) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
       {navigations.map(({ path: destination, label }) => (
@@ -15,6 +19,7 @@ const Navigation: FC = () => {
           spy={true}
           smooth={true}
           duration={350}
+          onClick={onLinkClick}
           sx={{
             position: 'relative',
             color: 'text.disabled',

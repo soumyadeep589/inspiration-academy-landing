@@ -8,6 +8,7 @@ import { Navigation } from '@/components/navigation'
 import { StyledButton } from '@/components/styled-button'
 import { useTheme } from '@mui/material/styles'
 import { Menu, Close } from '@mui/icons-material'
+import { Link as ScrollLink } from 'react-scroll'
 
 const Header: FC = () => {
   const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
@@ -24,6 +25,20 @@ const Header: FC = () => {
               <Menu />
             </IconButton>
           </Box>
+          {/* Overlay for mobile menu */}
+          {visibleMenu && matchMobileView && (
+            <Box
+              sx={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100vw',
+                height: '100vh',
+                backgroundColor: 'rgba(0,0,0,0.7)',
+                zIndex: (theme) => theme.zIndex.appBar - 1,
+              }}
+            />
+          )}
           <Box
             sx={{
               width: '100%',
@@ -38,20 +53,24 @@ const Header: FC = () => {
                 backgroundColor: 'background.paper',
                 zIndex: 'appBar',
                 position: 'fixed',
-                height: { xs: '100vh', md: 'auto' },
+                height: { xs: '50vh', md: 'auto' },
                 top: visibleMenu ? 0 : '-120vh',
                 left: 0,
               }),
             }}
           >
             <Box /> {/* Magic space */}
-            <Navigation />
-            <a href='#mentors'><StyledButton
-              variant="contained"
-              color="primary"
-            >
-              Contact Us
-            </StyledButton></a>
+            <Navigation onLinkClick={() => setVisibleMenu(!visibleMenu)} />
+            <ScrollLink to="mentors" spy={true} smooth={true} offset={0} duration={350}>
+              <StyledButton
+                variant="contained"
+                color="primary"
+                size="large"
+                onClick={() => setVisibleMenu(!visibleMenu)}
+              >
+                Contact Us
+              </StyledButton>
+            </ScrollLink>
             {visibleMenu && matchMobileView && (
               <IconButton
                 sx={{
