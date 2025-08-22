@@ -138,7 +138,7 @@ const HomeHero: FC = () => {
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
                   {
-                    "Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you san study comfortable and absorb tge material easily."
+                    "At Inspiration Academy, we make learning simple and flexible. You can set your own study time and move forward at the speed that suits you best. With a blend of offline courses and live classes, you’ll study comfortably, stay motivated, and absorb knowledge with ease."
                   }
                 </Typography>
               </Box>
@@ -146,11 +146,6 @@ const HomeHero: FC = () => {
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="contained">
                     Get Started
-                  </StyledButton>
-                </ScrollLink>
-                <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="outlined" startIcon={<PlayArrowIcon />}>
-                    Watch Video
                   </StyledButton>
                 </ScrollLink>
               </Box>
@@ -201,8 +196,8 @@ const HomeHero: FC = () => {
                 </Typography>
               </Box>
             </Box>
-            <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/home-hero.jpg" width={775} height={787} alt="Hero img" />
+            <Box sx={{ lineHeight: 0, position: 'relative', height: { xs: 320, md: 470 }, mt: { xs: 4, md: 0 } }}>
+              <Image src="/images/home-hero.png" layout="fill" objectFit="contain" alt="Hero img" />
             </Box>
           </Grid>
         </Grid>
