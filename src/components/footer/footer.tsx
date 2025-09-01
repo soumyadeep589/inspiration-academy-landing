@@ -14,12 +14,12 @@ const Footer: FC = () => {
       <Container>
         <Grid container spacing={1}>
           <Grid item xs={12} md={5}>
-            <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
+            <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 }, textAlign: { xs: 'center', md: 'left' } }}>
               <Typography component="h2" variant="h2" sx={{ mb: 2 }}>
                 Inspiration
               </Typography>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                Inspiration is an online learning platform that has been operating since 2018 until now.
+                Inspiration is an learning academy that has been operating since 2023 until now.
               </Typography>
               <FooterSocialLinks />
             </Box>
