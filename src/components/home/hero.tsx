@@ -165,7 +165,7 @@ const HomeHero: FC = () => {
                 zIndex: 1,
                 backgroundColor: 'background.paper',
                 display: 'flex',
-                alignItems: 'flex-start',
+                alignItems: 'center',
                 width: 280,
               }}
             >
