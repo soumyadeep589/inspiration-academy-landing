@@ -34,9 +34,9 @@ const exps: Array<Exp> = [
 const ExpItem: FC<ExpItemProps> = ({ item }) => {
   const { value, label } = item
   return (
-    <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
+    <Box sx={{ textAlign: 'center', mb: { xs: 2, md: 1 } }}>
       <Typography
-        sx={{ color: 'secondary.main', mb: { xs: 1, md: 2 }, fontSize: { xs: 34, md: 44 }, fontWeight: 'bold' }}
+        sx={{ color: 'secondary.main', mb: { xs: 1, md: 0 }, fontSize: { xs: 34, md: 44 }, fontWeight: 'bold' }}
       >
         {value}
       </Typography>
@@ -49,9 +49,9 @@ const ExpItem: FC<ExpItemProps> = ({ item }) => {
 
 const CourseHero: FC = () => {
   return (
-    <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
+    <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 8, pb: { xs: 8, md: 10 } }}>
       <Container maxWidth="lg">
-        <Box sx={{ textAlign: 'center', mb: 4, px: { xs: 2, md: 10 } }}>
+        <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 6 }, px: { xs: 2, md: 10 } }}>
           <Box sx={{ mb: { xs: 2, md: 4 } }}>
             <Typography
               component="h1"
@@ -68,6 +68,15 @@ const CourseHero: FC = () => {
               Build skills with our courses and mentor from world-class companies.
             </Typography>
           </Box>
+        </Box>
+        <Box sx={{ boxShadow: 2, py: 6, px: 7, borderRadius: 4 }}>
+          <Grid container spacing={2}>
+            {exps.map((item, index) => (
+              <Grid key={index + item.label} item xs={12} md={4}>
+                <ExpItem item={item} />
+              </Grid>
+            ))}
+          </Grid>
         </Box>
       </Container>
     </Box>
