@@ -60,6 +60,7 @@ const Header: FC = () => {
           >
             <Box /> {/* Magic space */}
             <Navigation onLinkClick={() => setVisibleMenu(!visibleMenu)} />
+            {/* Link is not working here, it changes the page but not scroll to the section, so using anchor tag for now. */}
             <a href="/#mentors">
               <StyledButton
                 variant="contained"
