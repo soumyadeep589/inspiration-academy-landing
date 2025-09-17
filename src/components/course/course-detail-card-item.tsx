@@ -25,7 +25,9 @@ const CourseDetailCardItem: FC<Props> = ({ item }) => {
         <Grid container spacing={4}>
           <Grid item xs={12} md={8} order={{ xs: 1, md: 0 }}>
             <Box sx={{ pr: { xs: 2, md: 12 } }}>
-              <Typography component="h2" variant="h2" mb={4} fontSize={{ xs: 24, md: 36 }}>{item.title}</Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', md: 'flex-start' }, textAlign: { xs: 'center', md: 'left' } }}>
+                <Typography component="h2" variant="h2" mb={4} fontSize={{ xs: 24, md: 36 }}>{item.title}</Typography>
+              </Box>
               <Typography sx={{ mb: 2, color: 'text.secondary', lineHeight: 1.6 }}>{item.description}</Typography>
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', md: 'flex-start' } }}>
                 <Typography sx={{ mb: 4, fontSize: { xs: 16, md: 18 }, color: 'text.secondary' }}>Duration: <Typography component="mark" sx={{ fontWeight: 'bold', fontSize: { xs: 18, md: 20 }, color: 'secondary.main', backgroundColor: 'transparent' }}>{item.duration}</Typography></Typography>
