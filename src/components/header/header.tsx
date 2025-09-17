@@ -8,7 +8,6 @@ import { Navigation } from '@/components/navigation'
 import { StyledButton } from '@/components/styled-button'
 import { useTheme } from '@mui/material/styles'
 import { Menu, Close } from '@mui/icons-material'
-import { Link as ScrollLink } from 'react-scroll'
 
 const Header: FC = () => {
   const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
@@ -61,7 +60,7 @@ const Header: FC = () => {
           >
             <Box /> {/* Magic space */}
             <Navigation onLinkClick={() => setVisibleMenu(!visibleMenu)} />
-            <ScrollLink to="mentors" spy={true} smooth={true} offset={0} duration={350}>
+            <a href="/#mentors">
               <StyledButton
                 variant="contained"
                 color="primary"
@@ -70,7 +69,7 @@ const Header: FC = () => {
               >
                 Contact Us
               </StyledButton>
-            </ScrollLink>
+            </a>
             {visibleMenu && matchMobileView && (
               <IconButton
                 sx={{
