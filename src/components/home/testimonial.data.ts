@@ -3,23 +3,23 @@ import type { Testimonial } from '@/interfaces/testimonial'
 export const data: Array<Testimonial> = [
   {
     id: 1,
-    title: 'Detailed learning materials',
+    title: 'Strong Foundation in Computers',
     content:
-      'Classes that provide very detailed material in term of making UI UX Design starting team making low and hight quality, system designs, using data layout and make prototypes and testing.',
+      'The Introduction to Computer course helped me understand the basics clearly. From hardware to software, everything was explained in a simple way that made learning enjoyable.',
     user: {
       id: 1,
       name: 'Luis Sera',
-      professional: 'UI/UX Engineer',
+      professional: 'Student',
       photo: '1.jpg',
     },
   },
   {
     id: 2,
-    title: 'Best Quality Online Course!',
+    title: 'Best Programming Experience!',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'I took the Introduction to Programming course with Java, Python, and PHP. The hands-on approach gave me confidence to write code and build small projects right away.',
     user: {
-      id: 1,
+      id: 2,
       name: 'Riski',
       professional: 'Software Engineer',
       photo: '2.jpg',
@@ -27,37 +27,37 @@ export const data: Array<Testimonial> = [
   },
   {
     id: 3,
-    title: 'Very complete class',
+    title: 'Clear & Practical Accounting',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'The GST & Tally course was very practical and easy to follow. I can now manage accounts and taxation for my business without depending on others.',
     user: {
-      id: 1,
+      id: 3,
       name: 'Nguyễn Văn',
-      professional: 'FullStack Designer',
+      professional: 'Business Owner',
       photo: '3.jpg',
     },
   },
   {
     id: 4,
-    title: 'Great Quality!',
+    title: 'Creative Graphic Design Learning',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'The Graphic Design course using Photoshop and Illustrator was amazing. I learned how to create professional logos and posters that impressed my clients.',
     user: {
-      id: 1,
+      id: 4,
       name: 'Diana Jordan',
-      professional: 'SEO Expert',
+      professional: 'Freelance Designer',
       photo: '4.jpg',
     },
   },
   {
     id: 5,
-    title: 'Detailed learning materials',
+    title: 'Relaxing & Energizing Yoga',
     content:
-      'Classes that provide very detailed material in term of making UI UX Design starting team making low and hight quality, system designs, using data layout and make prototypes and testing.',
+      'Joining the Yoga course was life-changing. The postures and breathing techniques helped me reduce stress, stay active, and improve my overall health.',
     user: {
-      id: 1,
+      id: 5,
       name: 'Ashley Graham',
-      professional: 'Back-End Developer',
+      professional: 'Yoga Enthusiast',
       photo: '5.jpg',
     },
   },
