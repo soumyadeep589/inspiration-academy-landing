@@ -1,13 +1,14 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
 import { MainLayout } from '@/components/layout';
 import { NextPageWithLayout } from '@/interfaces/layout';
+import dynamic from 'next/dynamic';
 
+const DynamicContactHero = dynamic(() => import('../components/contact/contact-hero'));
 const DynamicContactForm = dynamic(() => import('../components/contact/contact-form'));
 
 const ContactPage: NextPageWithLayout = () => {
   return (
     <>
+      <DynamicContactHero />
       <DynamicContactForm />
     </>
   );

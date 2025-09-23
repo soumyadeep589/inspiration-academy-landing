@@ -3,8 +3,7 @@ import {
   Box,
   Button,
   Paper,
-  TextField,
-  Typography,
+  TextField
 } from "@mui/material";
 import { useState } from "react";
 
@@ -45,12 +44,8 @@ export default function ContactForm() {
   return (
     <Paper
       elevation={3}
-      sx={{ maxWidth: 500, mx: "auto", p: 4, borderRadius: 3 }}
+      sx={{ maxWidth: { xs: "90%", md: 760 }, mx: "auto", px: { xs: 2, md: 6 }, py: { xs: 6, md: 8 }, borderRadius: 3, my: { xs: 8, md: 10 } }}
     >
-      <Typography variant="h5" gutterBottom>
-        Contact Us
-      </Typography>
-
       <Box
         component="form"
         onSubmit={handleSubmit}
@@ -82,7 +77,7 @@ export default function ContactForm() {
           type="submit"
           variant="contained"
           color="primary"
-          sx={{ mt: 2 }}
+          sx={{ mt: 2, py: 2 }}
         >
           {loading ? "Sending..." : "Send"}
         </Button>
