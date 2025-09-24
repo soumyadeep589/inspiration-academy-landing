@@ -8,6 +8,8 @@ import { Navigation } from '@/components/navigation'
 import { StyledButton } from '@/components/styled-button'
 import { useTheme } from '@mui/material/styles'
 import { Menu, Close } from '@mui/icons-material'
+import MuiLink from '@mui/material/Link'
+import Link from 'next/link'
 
 const Header: FC = () => {
   const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
@@ -61,16 +63,18 @@ const Header: FC = () => {
             <Box /> {/* Magic space */}
             <Navigation onLinkClick={() => setVisibleMenu(!visibleMenu)} />
             {/* Link is not working here, it changes the page but not scroll to the section, so using anchor tag for now. */}
-            <a href="/contact">
-              <StyledButton
-                variant="contained"
-                color="primary"
-                size="large"
-                onClick={() => setVisibleMenu(!visibleMenu)}
-              >
-                Contact Us
-              </StyledButton>
-            </a>
+            <Link href="/contact" passHref>
+              <MuiLink>
+                <StyledButton
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  onClick={() => setVisibleMenu(!visibleMenu)}
+                >
+                  Contact Us
+                </StyledButton>
+              </MuiLink>
+            </Link>
             {visibleMenu && matchMobileView && (
               <IconButton
                 sx={{

@@ -1,16 +1,18 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Slider, { Settings } from 'react-slick'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import { useTheme, styled } from '@mui/material/styles'
-import { IconButton, useMediaQuery } from '@mui/material'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
+import { IconButton, useMediaQuery } from '@mui/material'
+import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
+import { styled, useTheme } from '@mui/material/styles'
+import { FC } from 'react'
+import Slider, { Settings } from 'react-slick'
 
-import { data } from './popular-course.data'
 import { CourseCardItem } from '@/components/course'
+import MuiLink from '@mui/material/Link'
+import Link from 'next/link'
+import { data } from './popular-course.data'
 
 interface SliderArrowArrow {
   onClick?: () => void
@@ -110,7 +112,13 @@ const HomePopularCourse: FC = () => {
           <Grid item xs={12} md={9}>
             <Slider {...sliderConfig}>
               {data.map((item) => (
-                <CourseCardItem key={String(item.id)} item={item} />
+                <Link href="/courses" key={item.title} passHref>
+                  <MuiLink underline="none"
+                    sx={{ color: 'inherit' }}
+                  >
+                    <CourseCardItem item={item} />
+                  </MuiLink>
+                </Link>
               ))}
             </Slider>
           </Grid>

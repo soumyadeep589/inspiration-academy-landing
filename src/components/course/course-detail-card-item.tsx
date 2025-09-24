@@ -6,6 +6,8 @@ import ArrowForward from '@mui/icons-material/ArrowForward'
 import { Course } from '@/interfaces/course'
 import { Grid } from '@mui/material'
 import { StyledButton } from '../styled-button'
+import Link from 'next/link'
+import MuiLink from '@mui/material/Link'
 
 interface Props {
   item: Course
@@ -33,7 +35,11 @@ const CourseDetailCardItem: FC<Props> = ({ item }) => {
                 <Typography sx={{ mb: 4, fontSize: { xs: 16, md: 18 }, color: 'text.secondary' }}>Duration: <Typography component="mark" sx={{ fontWeight: 'bold', fontSize: { xs: 18, md: 20 }, color: 'secondary.main', backgroundColor: 'transparent' }}>{item.duration}</Typography></Typography>
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', md: 'flex-start' }, mb: { xs: 4, md: 0 } }}>
-                <StyledButton variant="contained" endIcon={<ArrowForward />} size="large">Get Started</StyledButton>
+                <Link href="/contact" passHref>
+                  <MuiLink>
+                    <StyledButton variant="contained" endIcon={<ArrowForward />} size="large">Get Started</StyledButton>
+                  </MuiLink>
+                </Link>
               </Box>
             </Box>
           </Grid>
