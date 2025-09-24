@@ -1,12 +1,8 @@
-import React, { FC } from 'react'
-import Image from 'next/image'
 import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import { Link as ScrollLink } from 'react-scroll'
-import { StyledButton } from '@/components/styled-button'
-import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import { FC } from 'react'
 
 interface Exp {
   label: string

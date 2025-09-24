@@ -1,12 +1,12 @@
-import React, { FC } from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
+import { FC } from 'react'
 
 interface Props {
   onClick?: () => void
   variant?: 'primary' | 'secondary'
 }
 
-const Logo: FC<Props> = ({ onClick, variant }) => {
+const Logo: FC<Props> = ({ onClick }) => {
   return (
     <Box
       onClick={onClick}

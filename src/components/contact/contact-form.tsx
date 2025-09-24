@@ -5,13 +5,13 @@ import {
   Paper,
   TextField
 } from "@mui/material";
-import { useState } from "react";
+import { FC, useState } from "react";
 
-export default function ContactForm() {
+const ContactForm: FC = () => {
   const [status, setStatus] = useState<"success" | "error" | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     setLoading(true);
     setStatus(null);
@@ -97,3 +97,5 @@ export default function ContactForm() {
     </Paper>
   );
 }
+
+export default ContactForm;
