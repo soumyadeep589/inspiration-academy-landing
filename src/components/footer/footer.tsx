@@ -18,13 +18,13 @@ const Footer: FC = () => {
               <Typography component="h2" variant="h2" sx={{ mb: 2 }}>
                 Inspiration
               </Typography>
-              <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 4 }}>
+              <Typography variant="body2" sx={{ letterSpacing: 0.8, mb: 4 }}>
                 Inspiration is an learning academy that has been operating since 2023 until now.
               </Typography>
-              <Typography variant="body1" sx={{ letterSpacing: 1 }}>
+              <Typography variant="body2" sx={{ letterSpacing: 0.8 }}>
                 +91 9775042486
               </Typography>
-              <Typography variant="body1" sx={{ letterSpacing: 1, mb: 2 }}>
+              <Typography variant="body2" sx={{ letterSpacing: 0.8, mb: 2 }}>
                 inspiration.academy2025@gmail.com
               </Typography>
               <FooterSocialLinks />
