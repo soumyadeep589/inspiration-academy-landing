@@ -1,9 +1,9 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
 import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
+import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
+import { FC } from 'react'
 
 const Footer: FC = () => {
   return (
@@ -18,8 +18,14 @@ const Footer: FC = () => {
               <Typography component="h2" variant="h2" sx={{ mb: 2 }}>
                 Inspiration
               </Typography>
-              <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
+              <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 4 }}>
                 Inspiration is an learning academy that has been operating since 2023 until now.
+              </Typography>
+              <Typography variant="body1" sx={{ letterSpacing: 1 }}>
+                +91 9775042486
+              </Typography>
+              <Typography variant="body1" sx={{ letterSpacing: 1, mb: 2 }}>
+                inspiration.academy2025@gmail.com
               </Typography>
               <FooterSocialLinks />
             </Box>

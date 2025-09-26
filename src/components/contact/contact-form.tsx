@@ -1,3 +1,4 @@
+import { API_CONFIG } from "@/lib/config";
 import {
   Alert,
   Box,
@@ -8,6 +9,8 @@ import {
 import { FC, useState } from "react";
 
 const ContactForm: FC = () => {
+  const accessKey = process.env.NEXT_PUBLIC_ACCESS_KEY;
+
   const [status, setStatus] = useState<"success" | "error" | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -19,7 +22,7 @@ const ContactForm: FC = () => {
     const formData = new FormData(e.currentTarget);
 
     try {
-      const res = await fetch("https://api.staticforms.xyz/submit", {
+      const res = await fetch(API_CONFIG.forms, {
         method: "POST",
         body: formData,
       });
@@ -52,7 +55,7 @@ const ContactForm: FC = () => {
         sx={{ display: "flex", flexDirection: "column", gap: 2 }}
       >
         {/* Required hidden fields */}
-        <input type="hidden" name="accessKey" value="sf_f9ih7i293mh7nd19lm0eld92" />
+        <input type="hidden" name="accessKey" value={accessKey} />
 
         <TextField label="Name" name="name" required fullWidth />
 
